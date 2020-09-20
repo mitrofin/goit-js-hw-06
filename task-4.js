@@ -1,9 +1,6 @@
-const getInactiveUsers = array =>
-  users.filter(({ isActive }) => isActive !== Active);
+const getInactiveUsers = array => array.filter(({ isActive }) => !isActive);
 
-console.log(getInactiveUsers(users));
-
-/* [
+const users = [
   {
     id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
     name: 'Moore Hensley',
@@ -39,5 +36,15 @@ console.log(getInactiveUsers(users));
     skills: ['non', 'amet', 'ipsum'],
     gender: 'male',
     age: 38,
-  }     
-]; */
+  },
+];
+
+console.log(getInactiveUsers(users));
+/**
+ *filter и оператор !
+Получи массив только неактивных пользователей (отфильтруй по значению свойства isActive)
+
+Используй деструктурирующее присваивание для параметра функции ({isActive}) без пробелов и переносов на новую строку.
+
+Используй оператор !.
+ */
